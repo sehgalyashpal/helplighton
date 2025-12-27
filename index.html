@@ -1,30 +1,26 @@
+<!DOCTYPE html>
 <html>
-<head><title>helplighton</title></head>
+<head>
+  <title>helplighton</title>
+</head>
+
 <body id="body">
 
-
-<!--Navigation tap-->
-<nav id="nav" width="100%">
-   ||| <a id="aa" href="index.html">HOME PAGE</a>|||
-    <a  id="ab" href="index.html">HELP ME</a>|||
-    <a id="ac" href="index.html">TRY AGAIN</a>|||
-    <a id="ad" href="index.html">OTHER SITES </a>|||
+<nav id="nav">
+   ||| <a href="index.html">HOME PAGE</a>|||
+   <a href="index.html">HELP ME</a>|||
+   <a href="index.html">TRY AGAIN</a>|||
+   <a href="index.html">OTHER SITES</a>|||
 </nav>
-<!--Navigation End-->
 
-<h1 id="h1" ><u>BATTI JALAO</u></h1>
+<h1 id="h1"><u>BATTI JALAO</u></h1>
 
-<audio id="audio" src="images/ghost.mp3" >play</audio>
-<audio id="audio1" src="images/ghostsee.mp3">play</audio>
+<p id="intro">description</p>
 
-<p id="intro">description</p>  
-<!--Heading End-->
-
-
-<!--GAME START HERE-->
-<img id="bulb" src="images/fused.jpg" height="100%" onclick=imgChange()
+<img id="bulb" src="images/fused.jpg" height="100%" onclick="imgChange()">
 
 <br>
+
 <form
   name="contact"
   method="POST"
@@ -32,6 +28,7 @@
   action="/"
   id="nm"
 >
+  <!-- REQUIRED -->
   <input type="hidden" name="form-name" value="contact">
 
   <input
@@ -44,49 +41,37 @@
 
   <button type="submit">Send</button>
 </form>
-<!--<img id="switch" src="image/switchoff.png" width="20%">-->
 
+<audio id="audio" src="images/ghost.mp3"></audio>
+<audio id="audio1" src="images/ghostsee.mp3"></audio>
+
+<style>
+#body{background-color: violet;}
+#nav{background-color:orange; border:solid; text-align:center; font-size:30px;}
+h1{text-align:center;}
+#intro{text-align:center;}
+img{display:block;margin:auto;}
+</style>
+
+<script>
+document.getElementById("h1").textContent="SWITCH ON THE LIGHT";
+document.getElementById("intro").textContent="Click on the bulb to switch on the light";
+
+function imgChange() {
+  const name = prompt("Dear helper! Please let me know your good name!");
+  if (!name) return;
+
+  document.getElementById("username").value = name;
+
+  document.getElementById("bulb").src="images/ghost1.jpg";
+  document.getElementById("body").style.backgroundColor="black";
+  document.getElementById("audio").play();
+  document.getElementById("audio1").play();
+
+  // ✅ THIS LINE SENDS DATA TO NETLIFY
+  document.getElementById("nm").submit();
+}
+</script>
 
 </body>
 </html>
-
-<!--CSS Start here-->
-<style>
-#body{background-color: violet;}
-#nav{color:red; background-color:orange; border:solid; text-align: center; font-size: 30px;}
-h1{color:darkred; text-align: center; font-size: 50px;}
-#intro{color:orange; background-color: blueviolet; font-size:20px; text-align: center;}
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
-
-<!--CSS End here-->
-
-<!--JavaScript Start here-->
-
-<script>
-
-document.getElementById("h1").textContent="SWITCH ON THE LIGHT";
-document.getElementById("intro").textContent="Click on the bulb to switch on the light I am feeling feared from ghost of the dark!!!";
-
-function imgChange()
-{
-  document.getElementById("username").value =
-    prompt("Dear helper! Please let me know your good name!");
-  
-document.getElementById("bulb").src="images/ghost1.jpg";
-document.getElementById("intro").textContent="";
-document.getElementById("h1").textContent="";
-document.getElementById("nav").textContent="";
-document.getElementById("body").style.backgroundColor="black";
-document.getElementById("audio").play();
-document.getElementById("audio1").play();
-
-}
-
-</script>
-
-<!--JavaScript End here-->
