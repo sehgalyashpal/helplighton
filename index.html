@@ -49,7 +49,7 @@
 
     /* Intro text */
 #intro{
-  font-size: 22px;
+  font-size: 30px;
   line-height: 1.6;
   color: white;
   background: black;
@@ -86,7 +86,7 @@
   <audio id="audio" src="images/ghost.mp3"></audio>
   <audio id="audio1" src="images/ghostsee.mp3"></audio>
 
-  <p id="intro">description</p>
+  <p id="intro"> "Click on the bulb to switch on the light. I am feeling feared from ghost of the dark!!!"</p>
 
   <!-- Bulb Image -->
   <img id="bulb" src="images/fused.jpg" onclick="imgChange()">
@@ -94,8 +94,8 @@
   <!-- JavaScript -->
   <script>
     document.getElementById("h1").textContent = "SWITCH ON THE LIGHT";
-    document.getElementById("intro").textContent =
-      "Click on the bulb to switch on the light. I am feeling feared from ghost of the dark!!!";
+   // document.getElementById("intro").textContent =
+   //   "Click on the bulb to switch on the light. I am feeling feared from ghost of the dark!!!";
 
     function imgChange() {
       document.getElementById("bulb").src = "images/ghost1.jpg";
